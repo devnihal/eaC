@@ -1,17 +1,22 @@
-# Makefile for EAC - Executable ASCII Canvas
-
 CC = gcc
-CFLAGS = -Wall -Wextra
+CFLAGS = -Wall -Wextra -O2
 SRC = src/main.c src/canvas.c
-OUT = builds/eac.exe
+OUT_DIR = builds
+OUT = $(OUT_DIR)/eac
 
 all: $(OUT)
 
 $(OUT): $(SRC)
-	$(CC) $(CFLAGS) $(SRC) -o $(OUT)
+	@$(if exist "$(OUT_DIR)",,mkdir "$(OUT_DIR)")
+	$(CC) $(CFLAGS) -o "$(OUT)" $(SRC)
+	@echo "Build complete: $(OUT)"
 
-run: $(OUT)
-	./$(OUT)
+run: all
+	@echo "Running $(OUT)..."
+	@"./$(OUT)"
 
 clean:
-	del /q builds\* 2>nul || rm -f builds/*
+	rm -rf "$(OUT_DIR)"
+	@echo "Cleaned up build directory."
+
+rebuild: clean all
