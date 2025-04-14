@@ -37,7 +37,7 @@ Much like the HTML5 `<canvas>` element in JavaScript, EAC lets you draw using co
 ## 🏗️ File Structure
 
 ```
-EAC/
+eaC/
 ├── src/
 │   ├── main.c         # Main loop, input handling
 │   ├── canvas.c       # Drawing logic and rendering
@@ -59,52 +59,6 @@ EAC/
 4. **Canvas Refresh**: Uses `system("cls||clear")` to simulate screen refresh.
 
 ---
-
-## ⚙️ Usage
-
-### 🧪 Run Manually (Windows/Linux)
-
-1. **Compile the Code**:
-   - Using `make` (if available):
-     ```bash
-     make
-     ```
-   - Alternatively, compile manually:
-     - On Windows:
-       ```bash
-       gcc src/main.c src/canvas.c -o builds/eac.exe
-       ```
-     - On Linux:
-       ```bash
-       gcc src/main.c src/canvas.c -o builds/eac
-       ```
-
-2. **Run the Program**:
-   - Using `make run` (if `make` is available):
-     ```bash
-     make run
-     ```
-   - Alternatively, run manually:
-     - On Windows:
-       ```bash
-       ./builds/eac.exe
-       ```
-     - On Linux:
-       ```bash
-       ./builds/eac
-       ```
-
-3. **Import Drawings**:
-   - You can provide a `.eac` file to import and render its contents:
-     ```bash
-     ./builds/eac drawings/sample.eac
-     ```
-
-4. **Use Commands**:
-   - Enter commands like `moveTo(x, y)`, `lineTo(x, y)`, `fillRectangle(x, y, width, height)`, etc., to draw on the canvas.
-
----
-
 ## 🧰 Dependencies
 
 - **Compiler**: Requires `gcc` or any C compiler.
@@ -117,6 +71,80 @@ EAC/
 - **Standard C Libraries**:
   - `stdio.h`, `stdlib.h`, `string.h`, and `windows.h` (for Windows-specific terminal handling).
 
+---
+
+## ⚙️ Usage
+
+To utilize this project, you first need to acquire the source code. You can achieve this through either of the following standard methods:
+
+**1. Obtaining the Source Code:**
+
+**a) Cloning the Git Repository (Recommended):**
+
+For users with Git installed, cloning the repository is the preferred method as it allows for easy updating and contribution:
+
+```bash
+git clone [https://github.com/devnihal/eaC.git](https://github.com/devnihal/eaC.git)
+cd eaC
+```
+
+**b) Downloading and Extracting the ZIP Archive:**
+
+Alternatively, you can download a snapshot of the codebase as a ZIP file:
+
+1.  Click the following link to download the ZIP archive:
+    [Download ZIP](https://github.com/devnihal/eaC/archive/refs/heads/main.zip)
+2.  Your browser will download a file named `main.zip`.
+3.  Upon completion, extract the contents of this ZIP file to your desired location (e.g., a directory named `eaC`).
+
+After obtaining the source code via either method, navigate into the project's root directory:
+
+```bash
+cd eaC
+```
+
+You can now proceed with the manual build and execution steps outlined below.
+
+### 🧪 Run Manually (Windows/Linux)
+
+1.  **Compile the Code**:
+    - Using `make` (if available):
+      ```bash
+      make
+      ```
+    - Alternatively, compile manually:
+      - On Windows:
+        ```bash
+        gcc src/main.c src/canvas.c -o builds/eac.exe
+        ```
+      - On Linux:
+        ```bash
+        gcc src/main.c src/canvas.c -o builds/eac
+        ```
+
+2.  **Run the Program**:
+    - Using `make run` (if `make` is available):
+      ```bash
+      make run
+      ```
+    - Alternatively, run manually:
+      - On Windows:
+        ```bash
+        ./builds/eac.exe
+        ```
+      - On Linux:
+        ```bash
+        ./builds/eac
+        ```
+
+3.  **Import Drawings**:
+    - You can provide a `.eac` file to import and render its contents:
+      ```bash
+      ./builds/eac drawings/sample.eac
+      ```
+
+4.  **Use Commands**:
+    - Enter commands like `moveTo(x, y)`, `lineTo(x, y)`, `fillRectangle(x, y, width, height)`, etc., to draw on the canvas.
 ---
 
 ## 🗣Commands
@@ -161,7 +189,13 @@ Want to improve EAC? Fork it, build it, and open a pull request!
 
 ## 📌 License
 
-MIT License – Free to use, modify, and distribute.
+This project is licensed under the **MIT License**.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+**THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.**
 
 ---
 
