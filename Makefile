@@ -3,7 +3,7 @@
 CC = gcc
 CFLAGS = -Wall -Wextra
 SRC = src/main.c src/canvas.c
-OUT = eac.exe
+OUT = builds/eac.exe
 
 all: $(OUT)
 
