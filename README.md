@@ -20,9 +20,9 @@ Much like the HTML5 `<canvas>` element in JavaScript, EAC lets you draw using co
 
 - 👡️ **`moveTo(x, y)`** – Moves the drawing cursor to the specified coordinates.
 - ✍️ **`lineTo(x, y)`** – Draws a straight line from the current cursor position to the given point using Bresenham’s line algorithm.
-- 🗆 **`rectangle(x, y, width, height)`** – Draws a rectangle using the top-left corner as a reference.
+- □ **`rectangle(x, y, width, height)`** – Draws a rectangle using the top-left corner as a reference.
 - ⚪ **`circle(x, y, radius)`** – Draws a circle centered at `(x, y)` with the given radius.
-- 🟑 **`fillRectangle(x, y, width, height)`** – Draws a filled rectangle from the top-left corner.
+- ■ **`fillRectangle(x, y, width, height)`** – Draws a filled rectangle from the top-left corner.
 - ⚫ **`fillCircle(x, y, radius)`** – Draws a filled circle centered at `(x, y)`.
 - 📝 **`writeText("text", x, y)`** – Renders styled uppercase ASCII characters onto the canvas at a specified location.
 - 🧼 **`clear`** – Clears the canvas and resets the cursor.
